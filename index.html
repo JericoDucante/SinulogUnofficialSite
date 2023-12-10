@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="logo"> 
+            <!-- <img src="images/sinulog foundation-logo.png " alt="" width="60px" height="60px"> -->
+            <img src="images/logo.png" alt="" width="180rem" height="50rem">
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">schedule</a></li>
+                <li><a href="">winners</a></li>
+                <li><a href="">photos</a></li>
+                <li><a href="">buy ticket</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="image">
+            <img class="image-pic" src="images/unnamed.png" alt="" width="650px" height="500px">
+            <p class="image-text"><i>One Beat, One Dance, One Vision</i></p>
+            <div id="timer">
+                <span class="time-unit" id="days">00</span>
+                <span class="time-unit" id="hours">00</span>
+                <span class="time-unit" id="minutes">00</span>
+                <span class="time-unit" id="seconds">00</span>
+            </div>
+        </div>
+        <div class="sched">
+            <h1>GRAND PARADE</h1>
+            <h2>JANUARY 21</h2>
+            <div class="schedule">
+                <div>
+                    <table>
+                        <tr>
+                            <th>JANUARY 6</th>
+                            <td class="data">SINULOG FUN RUN</td>
+                        </tr>
+                        <tr>
+                            <th>JANUARY 11</th>
+                            <td class="data">WALK WITH JESUS</td>
+                        </tr>
+                        <tr>
+                            <th>JANUARY 12</th>
+                            <td>SINULOG GRAND <br> LAUNCHING PARADE</td>
+                        </tr>
+                        <tr>
+                            <th>JANUARY 13</th>
+                            <td>SINULOG SA KABATAAN <br> SA LALAWIGAN</td>
+                        </tr>
+                        <tr>
+                            <th>JANUARY 14</th>
+                            <td>SINULOG KABATAAN <br> SA DAKBAYAN</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <table>
+                        <tr>
+                            <th>JANUARY 18</th>
+                            <td>SINULOG IDOL <br> GRAND FINALS</td>
+                        </tr>
+                        <tr>
+                            <th>JANUARY 19</th>
+                            <td><span class="data1">WALK WITH MARY <br> FESTIVAL QUEEN</span> <br> CORONATION NIGHT
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>JANUARY 20</th>
+                            <td class="data">FLUVIAL PARADE</td>
+                        </tr>
+                        <tr>
+                            <th>JANUARY 22</th>
+                            <td>AWARDING CEREMONIES</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <h1 class="trailer">Sinulog Trailer</h1>
+            
+            <div class="videos">
+                <div>
+                    <video controls width="395" >
+                        <source src="images/SINULOG 2023 MUSIC (THE COMEBACK WE’VE ALL BEEN WAITING FOR!).mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div>
+                    <video controls width="395" >
+                        <source src="images/sinulogvid.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Set the date we're counting down to
+const countDownDate = new Date("Jan 21, 2024 23:59:59").getTime();
+
+// Update the countdown every 1 second
+const x = setInterval(function() {
+  // Get the current date and time
+  const now = new Date().getTime();
+
+  // Calculate the remaining time
+  const distance = countDownDate - now;
+
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the countdown
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+
+  // If the countdown is over, display a message
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+function formatTime(time) {
+    return time < 10 ? '0${time}' : time;
+}
+</script>
+</body>
+</html>
