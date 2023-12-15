@@ -7,6 +7,7 @@
 
 body {
     background-image: url(images/sinulogbackground.png);
+    background-repeat: no-repeat;
 }
 
 header {
@@ -21,7 +22,6 @@ header {
     padding: 5px;
     margin-left: 20px;
 }
-
 
 nav {
     width: 700px;
@@ -83,7 +83,7 @@ main div {
 
 .image {
     align-items: center;
-    padding-top: 90px;
+    padding-top: 80px;
     width: 550px;
 }
 
@@ -106,22 +106,25 @@ main div {
     font-size: 3em;
     justify-content: center;
     text-align: center;
+    padding-top: 30px;
 }
 
 .time-unit {
     font-weight: bold;
     color: yellow;
     background-color: red;
-    border-radius: 5px;
-    width: 92px;
+    border-radius: 10px;
+    width: 100px;
     max-width: 92px;
+    padding: 3px 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 
 
 .sched {
-    margin-top: 90px;
+    margin-top: 80px;
     padding: 0;
     width: 900%;
     justify-content: center;
@@ -226,7 +229,7 @@ video {
     .image {
         align-items: center;
         width: 100%;
-        padding-top: 80px;
+        padding-top: 70px;
         width: 100vw;
         height: 100vh;
     }
@@ -237,9 +240,9 @@ video {
     }
 
     .image-pic {
-        width: 17rem;
+        width: 20rem;
         height: auto;
-        margin-left: 50px;
+        margin-left: 27px;
         position: relative;
     }
     .image-text {
@@ -252,42 +255,55 @@ video {
         color: white;
         background-color: transparent;
         width: 360px;
+        height: 120px;
         text-align: center;
         border-radius: 50px;
-    }
+        display: flex;
+        
+    } 
 
-    span {
-        width: 100px;
+    .image-text span {
+        width: 190px;
+        height: 35px;
+        padding: 5px;
+        display: block;
+        margin-bottom: 7px;
+        margin-left: 90px;
     }
 
     .tag1 {
         background-color: red;
         width: 150px;
-        border-radius: 30px;
+        border-radius: 10px;
     }
 
     .tag2 {
         background-color: green;
         width: 150px;
-        border-radius: 30px;
+        border-radius: 10px;
+    }
+
+    .tag2::after {
+        content: "\a";
+        white-space: pre;
     }
 
     .tag3 {
         background-color: orangered;
         width: 150px;
-        border-radius: 30px;
-        margin-top: 50px;
+        border-radius: 10px;
     }
     
     #timer {
         font-size: 3em;
         justify-content: center;
         text-align: center;
-        margin-top: 90px;
+        margin-top: 100px;
     }
     
     .time-unit {
         font-weight: bold;
+        font-size: 30px;
         color: yellow;
         background-color: red;
         border-radius: 5px;
