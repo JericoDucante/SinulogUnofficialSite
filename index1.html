@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinulogUnofficialSite</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header class="header" id="navbar">
+        <img class="logo1" src="images/logo.png" alt="" width="180rem" height="50rem">
+        <nav class="navbar">
+            <a href="index.html" onclick="closeNavbar()" >Back</a>
+        </nav>
+    </header>
+
+    <section id="WINNERS">
+        <div>
+            <img src="sinulogbackgroundcrop.jpg" alt="">
+                <h1 class="title">WINNERS</h1>
+                    <div class="div4">
+                        <div class="div5">
+                            <h1>SINULOG sa DAKBAYAN</h1>
+                            <h3>RITUAL SHOWDOWN</h3>
+                            <p>1st Place - Barangay GUADALUPE</p>
+                            <p>2nd Place - Barangay SAN NICOLOS</p>
+                            <p>3rd Place - Barangay INAYAWAN</p>
+                            <p>4th Place - Barangay LABANGON</p>
+                            <P>5th Place - Barangay MABOLO</P>
+                            <h3>STREET DANCING</h3>
+                            <p>1st Place - Barangay INAYAWAN</p>
+                            <p>2nd Place - Barangay T. PADILLA</p>
+                            <p>3rd Place - Barangay GUADALUPE</p>
+                            <h3>BEST in MUSICALITY</h3>
+                            <p>1st Place - Barangay GUADALUPE</p>
+                            <p>2nd Place - Barangay INAYAWAN</p>
+                            <p>3rd Place - Barangay SAN NICOLOS</p>
+                            <p>4th Place - Barangay LABANGON</p>
+                            <P>5th Place - Barangay MABOLO</P>
+                            <h3>BEST in COSTUME</h3>
+                            <p>1st Place - Barangay GUADALUPE</p>
+                        </div>
+                        <div class="div5">
+                            <h1>SINULOG sa LALAWIGAN</h1>
+                            <h3>RITUAL SHOWDOWN</h3>
+                            <p>1st Place - CARCAR CITY</p>
+                            <p>2nd Place - TALISAY CITY</p>
+                            <p>3rd Place - NAGA CITY</p>
+                            <p>4th Place - MANDAUE CITY</p>
+                            <P>5th Place - TOLEDO CITY</P>
+                            <h3>STREET DANCING</h3>
+                            <p>1st Place - Municipality of SAMBOAN</p>
+                            <p>2nd Place - CARCAR CITY Division</p>
+                            <p>3rd Place - TALISAY CITY</p>
+                            <h3>FESTIVAL QUEEN</h3>
+                            <p>CARCAR CITY DIVISION</p>
+                            <p>1st Place - CONSOLACION</p>
+                            <p>2nd Place - MANDAUE CITY</p>
+                            <h3>BEST in FESTIVAL QUEEN COSTUME</h3>
+                            <p class="p1">CONSOLACION</p>
+                            <h3>BEST in MUSICALITY</h3>
+                            <p class="p1">CARCAR CITY Division</p>
+                            <h3>BEST in COSTUME</h3>
+                            <p class="p1">CARCAR CITY Division</p>
+                            <h3>BEST in INTRODUCTION VIDEO</h3>
+                            <p>1st Place - TALISAY CITY</p>
+                            <p>2nd Place - Municipality of PORO</p>
+                            <p>3rd Place - Municipality of SAMBOAN</p>
+                        </div>
+                        <div class="div5">
+                            <h1>SINULOG GRAND PARADE</h1>
+                            <h3>RITUAL SHOWDOWN</h3>
+                            <p>1st Place - TBA</p>
+                            <p>2nd Place - TBA</p>
+                            <p>3rd Place - TBA</p>
+                            <p>4th Place - TBA</p>
+                            <P>5th Place - TBA</P>
+                            <h3>STREET DANCING</h3>
+                            <p>1st Place - TBA</p>
+                            <p>2nd Place - TBA</p>
+                            <p>3rd Place - TBA</p>
+                            <h3>FESTIVAL QUEEN</h3>
+                            <p>TBA</p>
+                            <p>1st Place - TBA</p>
+                            <p>2nd Place - TBA</p>
+                            <h3>BEST in FESTIVAL QUEEN COSTUME</h3>
+                            <p class="p1">TBA</p>
+                            <h3>BEST in MUSICALITY</h3>
+                            <p class="p1"> TBA</p>
+                            <h3>BEST in COSTUME</h3>
+                            <p class="p1"> TBA</p>
+                            <h3>BEST in INTRODUCTION VIDEO</h3>
+                            <p>1st Place - TBA </p>
+                            <p>2nd Place - TBA</p>
+                            <p>3rd Place - TBA</p>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        // header 
+        let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+    const navbar = document.getElementById("navbar");
+
+    if (prevScrollPos > currentScrollPos) {
+        navbar.style.top = "0";
+    } else {
+        navbar.style.top = "-300px";
+        // Hide the navigation when scrolling down
+        navbar.querySelector("nav").classList.remove("active");
+    }
+
+    prevScrollPos = currentScrollPos;
+};
+
+// navbar
+
+document.addEventListener('DOMContentLoaded', function () {
+  const list = document.querySelector('.list');
+  const listItems = document.querySelectorAll('.list li');
+
+  listItems.forEach(item => {
+    item.addEventListener('click', function () {
+      if (window.innerWidth <= 360) {
+        list.classList.toggle('closed');
+      }
+    });
+  });
+});
+
+function closeNavbar() {
+    const navbar = document.getElementById("navbar");
+    navbar.querySelector("nav").classList.remove("active");
+}
+
+</script>
+</body>
+</html>
